@@ -1,0 +1,17 @@
+package Assignment1GradleProject;
+
+import java.util.ArrayList;
+import org.joda.time.DateTime;
+public class CourseProgramme {
+	
+	private String courseName;
+	private ArrayList<Module> modules;
+	private ArrayList<Student> enrolledStudents;
+	private DateTime startDate= new DateTime(2022,11,1,9,0); //year,month,day,hour,minute
+	private DateTime endDate= new DateTime(2026,10,31,23,0);
+	
+	public CourseProgramme(String courseName)
+	{
+		
+	}
+}

@@ -1,0 +1,27 @@
+package Assignment1GradleProject;
+
+import org.junit.Assert;
+import java.util.ArrayList;
+public class ModuleTest {
+	
+	private Module module;
+	
+	public ModuleTest(Module module)
+	{
+		this.module=module;
+	}
+	
+	public void testGetModuleCode()
+	{
+		Assert.assertSame(10,module.getModuleCode());
+	}
+	
+	public void testGetModuleName()
+	{
+		Assert.assertSame("Random Module Name", module.getModuleName());
+	}
+	
+	
+	
+
+}

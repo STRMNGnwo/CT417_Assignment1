@@ -1,0 +1,47 @@
+package Assignment1GradleProject;
+
+import org.junit.Assert;
+import org.junit.Test;
+
+import java.util.ArrayList;
+public class ModuleTest {
+	
+	private Module module;
+	
+	public ModuleTest()
+	{
+		module=new Module(5001,"ct5001",null);
+	}
+	
+	
+	@Test
+	public void testGetModuleCode()
+	{
+		Assert.assertEquals(5001,module.getModuleCode());
+	}
+	
+	
+	@Test
+	public void testGetModuleName()
+	{
+		module.setModuleName("ct5001");
+		Assert.assertEquals("ct5001",module.getModuleName());
+	}
+	
+	@Test
+	public void testGetRegisteredStudents()
+	{
+		
+		Assert.assertTrue(module.getRegisteredStudents() instanceof ArrayList);
+	}
+	
+	@Test
+	public void getLecturerResponsible()
+	{
+		Lecturer lecturer= new Lecturer("Mr.Heisenberg",28,"19/02/1994",197642);
+		
+		Assert.assertTrue(module.getLecturerResponsible() instanceof Lecturer);
+	}
+	
+
+}

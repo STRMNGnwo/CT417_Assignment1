@@ -1,0 +1,21 @@
+package Assignment1GradleProject;
+
+import java.util.ArrayList;
+public class Module {
+	
+	private int moduleCode;
+	private String name;
+	
+	private Lecturer lecturerResponsible;
+	private ArrayList<Student> registeredStudents;
+	private ArrayList<CourseProgramme> coursesAssociatedWith;
+	
+	public Module(int moduleCode, String name, Lecturer lecturerResponsible)
+	{
+		this.moduleCode= moduleCode;
+		this.name= name;
+		this.lecturerResponsible=lecturerResponsible;
+		
+	}
+
+}

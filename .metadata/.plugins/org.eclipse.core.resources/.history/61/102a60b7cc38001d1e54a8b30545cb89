@@ -1,0 +1,15 @@
+package Assignment1GradleProject;
+
+import java.util.ArrayList;
+//import org.joda.time.DateTime;
+public class CourseProgramme {
+	
+	private String courseName;
+	private ArrayList<Module> modules;
+	private ArrayList<Student> enrolledStudents;
+	
+	public CourseProgramme(String courseName)
+	{
+		
+	}
+}

@@ -1,0 +1,68 @@
+package Assignment1GradleProject;
+
+import java.util.ArrayList;
+public class Module {
+	
+	private int moduleCode;
+	private String name;
+	
+	private Lecturer lecturerResponsible;
+	private ArrayList<Student> registeredStudents;
+	private ArrayList<CourseProgramme> coursesAssociatedWith;
+	
+	public Module(int moduleCode, String name, Lecturer lecturerResponsible)
+	{
+		this.moduleCode= moduleCode;
+		this.name= name;
+		this.lecturerResponsible=lecturerResponsible;
+		
+		registeredStudents=new ArrayList<Student>();
+		
+	}
+
+	//accessor and mutator methods
+	public int getModuleCode() {
+		return moduleCode;
+	}
+
+	public void setModuleCode(int moduleCode) {
+		this.moduleCode = moduleCode;
+	}
+
+	public String getModuleName()
+	{
+		return name;
+	}
+	
+	public void setModuleName(String name)
+	{
+		this.name=name;
+	}
+	
+	public Lecturer getLecturerResponsible() {
+		return lecturerResponsible;
+	}
+
+	public void setLecturerResponsible(Lecturer lecturerResponsible) {
+		this.lecturerResponsible = lecturerResponsible;
+	}
+
+	public ArrayList<Student> getRegisteredStudents() {
+		return registeredStudents;
+	}
+	
+	public void addRegisteredStudent(Student student)
+	{
+		registeredStudents.add(student);
+	}
+
+	public ArrayList<CourseProgramme> getCoursesAssociatedWith() {
+		return coursesAssociatedWith;
+	}
+	
+	public void addCourseAssociatedWith(CourseProgramme courseProgramme)
+	{
+		coursesAssociatedWith.add(courseProgramme);
+	}
+
+}

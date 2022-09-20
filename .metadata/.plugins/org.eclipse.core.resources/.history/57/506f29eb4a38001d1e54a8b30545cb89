@@ -1,0 +1,12 @@
+package Assignment1GradleProject;
+
+public class ModuleTest {
+	
+	private Module module;
+	
+	public ModuleTest(Module module)
+	{
+		this.module=module;
+	}
+
+}

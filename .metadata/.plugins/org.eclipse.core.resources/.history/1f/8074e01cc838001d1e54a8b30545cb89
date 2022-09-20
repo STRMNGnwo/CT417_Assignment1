@@ -1,0 +1,65 @@
+package Assignment1GradleProject;
+
+import org.junit.Assert;
+import org.junit.Test;
+import java.util.ArrayList;
+public class StudentTest {
+	
+	private Student student;
+	
+	public StudentTest(Student student)
+	{
+		this.student=student;
+	}
+	
+	@Test
+	public void testGetName()
+	{
+		Assert.assertSame("Random String", student.getName());
+	}
+	
+	@Test
+	public void testGetAge()
+	{
+		Assert.assertSame(20, student.getAge());
+	}
+	
+	
+	@Test
+	public void testGetDOB()
+	{
+		Assert.assertSame("Random String", student.getDOB());
+	}
+	
+	
+	@Test
+	public void testGetId()
+	{
+		long randNum= 512412;
+		Assert.assertSame(randNum, student.getId());
+	}
+	
+	@Test
+	public void testGetUsername()
+	{
+		String username= student.getName()+student.getAge();
+		Assert.assertEquals(username,student.getUsername());
+	}
+	
+	@Test
+	public void testGetModules()
+	{
+		ArrayList<Student> randomArrayList=null;
+		Assert.assertSame(randomArrayList, student.getModules());
+	}
+	
+	@Test
+	public void testGetCourseProgrammes()
+	{
+		ArrayList<Student> randomArrayList=null;
+		Assert.assertSame(randomArrayList, student.getCourseProgrammes());
+	}
+	
+	
+
+}

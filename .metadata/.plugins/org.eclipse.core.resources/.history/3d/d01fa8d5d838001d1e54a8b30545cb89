@@ -1,0 +1,14 @@
+package Assignment1GradleProject;
+
+import java.util.ArrayList;
+import org.joda.time.DateTime;
+
+public class CourseProgrammeTest {
+	
+	private CourseProgramme cp ;
+	public CourseProgrammeTest()
+	{
+		cp= new CourseProgramme("Discrete Maths",new DateTime(2022,11,1,9,0),new DateTime(2022,11,1,9,0),new ArrayList<Module>(),new ArrayList<Student>());
+	}
+
+}

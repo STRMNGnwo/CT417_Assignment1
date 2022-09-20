@@ -1,0 +1,17 @@
+package Assignment1GradleProject;
+
+import org.junit.Assert;
+import java.util.ArrayList;
+public class ModuleTest {
+	
+	private Module module;
+	
+	public ModuleTest(Module module)
+	{
+		this.module=module;
+	}
+	
+	
+	
+
+}

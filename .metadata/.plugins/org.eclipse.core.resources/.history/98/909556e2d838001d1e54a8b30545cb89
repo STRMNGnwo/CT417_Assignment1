@@ -1,0 +1,23 @@
+package Assignment1GradleProject;
+
+import java.util.ArrayList;
+import org.joda.time.DateTime;
+import org.junit.Assert;
+
+public class CourseProgrammeTest {
+	
+	private CourseProgramme cp ;
+	
+	public CourseProgrammeTest()
+	{
+		cp= new CourseProgramme("Discrete Maths",new DateTime(2022,11,1,9,0),new DateTime(2022,11,1,9,0),new ArrayList<Module>(),new ArrayList<Student>());
+	}
+	
+	@Test
+	public void testGetCourseName()
+	{
+		String courseName="Discrete Maths";
+		Assert.assertEquals(courseName,cp.getCourseName());
+	}
+
+}
