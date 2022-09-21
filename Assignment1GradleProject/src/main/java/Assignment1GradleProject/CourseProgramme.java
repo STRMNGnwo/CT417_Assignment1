@@ -53,9 +53,24 @@ public class CourseProgramme {
 	{
 		return modules;
 	}
+	
+	public void addModule(Module module)
+	{
+		modules.add(module)
+	}
+	
+	public void setModules(ArrayList<Module> modules)
+	{
+		this.modules=modules;
+	}
 
 	public void setEnrolledStudents(ArrayList<Student> enrolledStudents) {
 		this.enrolledStudents = enrolledStudents;
+	}
+	
+	public void addEnrolledStudent(Student s)
+	{
+		enrolledStudents.add(s);
 	}
 
 	public DateTime getStartDate() {

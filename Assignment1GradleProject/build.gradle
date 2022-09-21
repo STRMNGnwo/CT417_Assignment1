@@ -32,7 +32,7 @@ dependencies {
 	implementation 'org.terasoluna.gfw:terasoluna-gfw-jodatime:5.6.0.M5'*/
 	
 	// https://mvnrepository.com/artifact/org.terasoluna.gfw/terasoluna-gfw-jodatime
-	implementation 'org.terasoluna.gfw:terasoluna-gfw-jodatime:5.7.1.SP1.RELEASE'
+	 implementation 'org.terasoluna.gfw:terasoluna-gfw-jodatime:5.7.1.SP1.RELEASE'
 	
     
     
