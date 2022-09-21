@@ -56,7 +56,7 @@ public class CourseProgramme {
 	
 	public void addModule(Module module)
 	{
-		modules.add(module)
+		modules.add(module);
 	}
 	
 	public void setModules(ArrayList<Module> modules)
