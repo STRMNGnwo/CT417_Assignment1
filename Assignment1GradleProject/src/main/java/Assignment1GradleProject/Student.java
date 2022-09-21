@@ -95,9 +95,31 @@ public class Student {
 		courseProgrammes.add(courseProgramme);
 	}
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	@Override
+	public String toString()
+	{
+		String returnString="\n\nStudent: \n ";
+		returnString+="Username:"+this.getName()+"\nName:"+this.getName();
+		
+		returnString+="Registered Course:";
+		
+		for(CourseProgramme cp: courseProgrammes)
+		{
+			returnString+="\n"+cp.getCourseName();
+		}
+		
+		returnString+="\n Registered Modules";
+		
+		for(CourseProgramme cp: courseProgrammes)//should usually be only 1 course/
+		{
+			for(Module m: cp.getModules())
+			{
+				returnString+="\n\n"+m.getModuleName();
+			}
+		}
+		
+		
+		return returnString;
 	}
 
 }

@@ -88,4 +88,22 @@ public class CourseProgramme {
 	public void setEndDate(DateTime endDate) {
 		this.endDate = endDate;
 	}
+	
+	@Override
+	public String toString() {
+		String returnString="Course:\n";
+		
+		returnString+=this.courseName+"\n"+"Start Date: "+startDate+"\n End Date: "+endDate;
+		
+		returnString+="\n\nModules in this course:";
+		
+		for(Module m: modules)
+		{
+			returnString+=m.getModuleName();
+			returnString+="\n Lecturer responsible: "+m.getLecturerResponsible().getName();
+		}
+			
+		return returnString;
+		
+	}
 }
