@@ -32,6 +32,8 @@ pipeline{
          ls -a
          cd Assignment1GradleProject
          ls -a
+         cd src
+         ls -a
         '''
        
       }
