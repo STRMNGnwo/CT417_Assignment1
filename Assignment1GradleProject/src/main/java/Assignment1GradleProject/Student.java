@@ -98,17 +98,17 @@ public class Student {
 	@Override
 	public String toString()
 	{
-		String returnString="\n\n-----------Student:------------------ \n ";
-		returnString+="Username:"+this.getName()+"\nName:"+this.getName();
+		String returnString="\n\n-----------Student:------------------ \n\n";
+		returnString+="Username:"+this.getUsername()+"\nName:"+this.getName();
 		
-		returnString+="\n\nRegistered Course:";
+		returnString+="\n\nRegistered Courses:";
 		
 		for(CourseProgramme cp: courseProgrammes)
 		{
 			returnString+="\n"+cp.getCourseName();
 		}
 		
-		returnString+="\n\nRegistered Modules";
+		returnString+="\n\nRegistered Modules:";
 		
 		for(CourseProgramme cp: courseProgrammes)//should usually be only 1 course/
 		{
@@ -118,7 +118,7 @@ public class Student {
 			}
 		}
 		
-		returnString+="---------------End of this Student Record-----------------\n\n";
+		returnString+="\n\n---------------End of this Student Record-----------------\n\n";
 		return returnString;
 	}
 

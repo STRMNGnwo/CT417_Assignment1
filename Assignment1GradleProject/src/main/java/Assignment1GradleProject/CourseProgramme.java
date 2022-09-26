@@ -91,11 +91,11 @@ public class CourseProgramme {
 	
 	@Override
 	public String toString() {
-		String returnString="\n\n-----------Course:---------------------\n\n ";
+		String returnString="\n\n-----------Course:---------------------\n\n";
 		
-		returnString+=this.courseName+"\n"+"Start Date: "+startDate+"\nEnd Date: "+endDate;
+		returnString+="Course Name: "+this.courseName+"\n"+"Start Date: "+startDate+"\nEnd Date: "+endDate;
 		
-		returnString+="\n\nModules in this course:";
+		returnString+="\n\nModules in this course: ";
 		
 		for(Module m: modules)
 		{
