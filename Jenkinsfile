@@ -32,7 +32,7 @@ pipeline{
     
     success{
      echo "end of pipeline"
-     deploy(adapters:[tomcat9(url:"http://localhost:8081",credentialsId:"tomcat-deployer",path:"deployedArtifacts")], war:"**/build/libs/*.war",contextPath: "deployedArtifacts")
+     deploy(adapters:[tomcat9(url:"http://localhost:8081",credentialsId:"tomcat-deployer",path:"/deployedArtifacts")], war:"**/build/libs/*.war",contextPath: "/deployedArtifacts")
      
     }
     
