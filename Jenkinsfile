@@ -28,7 +28,11 @@ pipeline{
     stage("END")
     {
       steps{
-        echo "Project should have completed building using Gradle."
+        echo "Project should have completed building using Gradle.Doing a ls to check for built artifact"
+        sh '''
+         ls -a
+        '''
+       
       }
     }
     
