@@ -91,18 +91,20 @@ public class CourseProgramme {
 	
 	@Override
 	public String toString() {
-		String returnString="Course:\n";
+		String returnString="\n\n-----------Course:---------------------\n\n ";
 		
-		returnString+=this.courseName+"\n"+"Start Date: "+startDate+"\n End Date: "+endDate;
+		returnString+=this.courseName+"\n"+"Start Date: "+startDate+"\nEnd Date: "+endDate;
 		
 		returnString+="\n\nModules in this course:";
 		
 		for(Module m: modules)
 		{
 			returnString+=m.getModuleName();
-			returnString+="\n Lecturer responsible: "+m.getLecturerResponsible().getName();
+			returnString+="\nLecturer responsible: "+m.getLecturerResponsible().getName();
+			returnString+="\n\n";
 		}
-			
+		
+		returnString+="------------End of this CourseProgramme record------------\n\n";
 		return returnString;
 		
 	}
