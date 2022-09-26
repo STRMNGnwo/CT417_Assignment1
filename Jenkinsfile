@@ -16,10 +16,12 @@ pipeline{
       steps{
         echo "Building the project using Gradle"
         
+       dir("./Assignment1GradleProject"){
         sh'''
           ls -a
-          ./Assignment1GradleProject/gradlew build
+          ./gradlew build
         '''
+       }
       
       }
       
