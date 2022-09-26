@@ -30,7 +30,7 @@ pipeline{
         echo "Project should have completed building using Gradle.Doing a ls to check for built artifact"
         sh '''
          ls -a
-         ./Assignment1GradleProject/gradlew war
+         ./Assignment1GradleProject/gradlew tasks
          cd Assignment1GradleProject
          ls -a
          cd src
