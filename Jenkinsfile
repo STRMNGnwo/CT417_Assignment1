@@ -24,12 +24,13 @@ pipeline{
       }
       
     }   
-   stage("Before Deploymeny")
+   stage("Generating WAR file")
     {
       steps{
         echo "Project should have completed building using Gradle.Doing a ls to check for built artifact"
         sh '''
          ls -a
+         ./Assignment1GradleProject/gradlew war
          cd Assignment1GradleProject
          ls -a
          cd src
