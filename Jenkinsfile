@@ -29,8 +29,8 @@ pipeline{
    post{
     
     success{
-     
-     deploy(adapters:[tomcat9(url:"http://localhost:8081",credentialsId:"tomcat-deployer",path:"deployedArtifacts")], war:"**/*.war",contextPath: "deployedArtifacts")
+     echo "end of pipeline"
+     //deploy(adapters:[tomcat9(url:"http://localhost:8081",credentialsId:"tomcat-deployer",path:"deployedArtifacts")], war:"**/*.war",contextPath: "deployedArtifacts")
      
     }
     
