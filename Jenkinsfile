@@ -23,17 +23,8 @@ pipeline{
       
       }
       
-    }
-    
-   stage("Deploy"){
-    
-    steps{
-     echo "Deploying to tomcat"
-     deploy(adapters:[tomcat9("http://localhost:8081",credentialsId:"tomcat-deployer",path:"deployedArtifacts")], war:"**/*.war",contextPath: "deployedArtifacts")
-    }
-   }
-    
-    stage("END")
+    }   
+   stage("Before Deploymeny")
     {
       steps{
         echo "Project should have completed building using Gradle.Doing a ls to check for built artifact"
@@ -45,8 +36,17 @@ pipeline{
        
       }
     }
-    
-    
+   
   }
-  
+    
+   post{
+    
+    success{
+     
+     deploy(adapters:[tomcat9(url:"http://localhost:8081",credentialsId:"tomcat-deployer",path:"deployedArtifacts")], war:"**/*.war",contextPath: "deployedArtifacts")
+     
+    }
+    
+   }
+   
 }
