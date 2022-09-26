@@ -18,7 +18,7 @@ pipeline{
         
         sh'''
           ls -a
-          ./Assignment1GradleProject/gradlew build
+          ./Assignment1GradleProject/gradlew clean build jar
         '''
       
       }
