@@ -16,27 +16,26 @@ pipeline{
       steps{
         echo "Building the project using Gradle"
         
+       dir("./Assignment1GradleProject"){
         sh'''
           ls -a
-          ./Assignment1GradleProject/gradlew build
+          ./gradlew build
         '''
+       }
       
       }
       
-    }
-    
-    stage("END")
-    {
-      steps{
-        echo "Project should have completed building using Gradle.Doing a ls to check for built artifact"
-        sh '''
-         ls -a
-        '''
-       
-      }
-    }
-    
-    
+    }   
   }
-  
+    
+   post{
+    
+    success{
+     echo "end of pipeline"
+     deploy(adapters:[tomcat9(url:"http://localhost:8443",credentialsId:"tomcat-deployer",path:"/manager/text'")], war:"**/build/libs/*.war",contextPath: "/deployedArtifacts")
+     
+    }
+    
+   }
+   
 }
