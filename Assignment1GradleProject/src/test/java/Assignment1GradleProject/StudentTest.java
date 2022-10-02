@@ -26,6 +26,13 @@ public class StudentTest {
 		Assert.assertEquals(21, student.getAge());
 	}
 	
+	@Test
+	public void testGetUsername()
+	{
+		String username= student.getName()+String.valueOf(student.getAge());
+		Assert.assertEquals(username, student.getUsername());
+	}
+	
 	
 	@Test
 	public void testGetDOB()
